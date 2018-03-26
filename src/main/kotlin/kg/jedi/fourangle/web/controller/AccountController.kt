@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.RestController
 
 
 @RestController
-@RequestMapping(value = [(Endpoints.ACCOUNT)], produces = [(ApiDoc.JSON_UTF8)])
+@RequestMapping(value = [(Endpoints.ACCOUNT_V1)], produces = [(ApiDoc.JSON_UTF8)])
 class AccountController {
 }
