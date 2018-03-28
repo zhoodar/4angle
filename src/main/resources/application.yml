@@ -1,20 +1,12 @@
 spring:
   profiles:
-    active:
+    active: local
   jpa:
     database: postgresql
-    hibernate:
-      ddl-auto: create-drop
-    show-sql: true
   jackson:
     date-format: com.fasterxml.jackson.databind.util.ISO8601DateFormat
     serialization:
       write-dates-as-timestamps: false
-  datasource:
-    driver-class-name: org.postgresql.Driver
-    username: postgres
-    password: password
-    url: jdbc:postgresql://localhost:5432/four_angle
   flyway:
     enabled: false
     out-of-order: true
@@ -23,7 +15,6 @@ spring:
       max-file-size: 10MB
       max-request-size: 20MB
 server:
-  port: 8080
   compression:
     enabled: true
     mime-types: application/json,application/xml,application/javascript,text/html,text/xml,text/plain
