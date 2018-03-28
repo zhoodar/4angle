@@ -5,7 +5,6 @@ import kg.jedi.fourangle.domain.entity.BaseEntity
 import org.springframework.data.repository.CrudRepository
 import java.util.*
 
-
 interface ReferenceReadService<E> {
     fun get(id: Long): E
     fun findAll(ids: List<Long>): MutableIterable<E>
@@ -27,7 +26,9 @@ open class DefaultReferenceReadService<E : BaseEntity>(
 
     @Throws(ObjectNotFoundException::class)
     override fun get(id: Long): E {
-        return crudRepository.findById(id).orElseThrow { throw ObjectNotFoundException("Record not found for id: $id") }
+        return crudRepository.findById(id).orElseThrow {
+            throw ObjectNotFoundException("Record not found for id: $id")
+        }
     }
 }
 
