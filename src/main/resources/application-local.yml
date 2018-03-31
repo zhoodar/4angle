@@ -1,7 +1,5 @@
 spring:
   jpa:
-    hibernate:
-      ddl-auto: create-drop
     show-sql: true
   datasource:
     driver-class-name: org.postgresql.Driver
@@ -13,11 +11,11 @@ spring:
     out-of-order: true
 
 server:
-  port: 8080
+  port: 8181
 
-access-control-allow-origin: *
+access-control-allow-origin: "*"
 
 jwt:
   token:
-    issuer:
-    signing-key:
+    issuer: 4ANGLE
+    signing-key: KEYMUSTBEHERE

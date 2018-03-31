@@ -3,6 +3,13 @@ spring:
     active: local
   jpa:
     database: postgresql
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
   jackson:
     date-format: com.fasterxml.jackson.databind.util.ISO8601DateFormat
     serialization:
