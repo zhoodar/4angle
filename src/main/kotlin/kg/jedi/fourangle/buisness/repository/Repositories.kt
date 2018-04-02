@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.JpaRepository
 import java.util.*
 
 interface AccountRepository : JpaRepository<Account, Long> {
-    fun findOneByEmailOrPhoneNumber(emailOrPhone: String): Optional<Account>
+    fun findOneByEmailOrPhoneNumber(email: String, phone: String): Optional<Account>
 }
 
 interface AdvertRepository : JpaRepository<Advert, Long>

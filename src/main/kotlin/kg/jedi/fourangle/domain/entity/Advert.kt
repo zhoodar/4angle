@@ -4,7 +4,7 @@ import javax.persistence.*
 
 @Entity
 @Table(name = "adverts")
-class Advert() : BaseEntity() {
+class Advert : BaseEntity() {
 
     @Column(name = "tittle")
     var tittle: String? = null
@@ -12,8 +12,8 @@ class Advert() : BaseEntity() {
     @Column(name = "description", length = 500)
     var description: String? = null
 
-    @Column(name = "contacts")
-    var contacts: String? = null
+    @Column(name = "contact")
+    var contact: String? = null
 
     @Column(name = "price")
     var price: String? = null
@@ -23,6 +23,9 @@ class Advert() : BaseEntity() {
 
     @Column(name = "address")
     var address: String? = null
+
+    @Column(name = "room_number")
+    var roomNumber: Int? = null
 
     @ManyToMany
     @JoinTable(name = "advert_image",

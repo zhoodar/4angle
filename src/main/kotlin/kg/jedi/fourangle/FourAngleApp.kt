@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories
 
 @SpringBootApplication
 @EnableJpaRepositories
-@EntityScan("kg.jedi.fourangle.domain")
+@EntityScan("kg.jedi.fourangle.domain.entity")
 class FourAngleApp
 
 fun main(args: Array<String>) {
