@@ -24,8 +24,8 @@ class Advert : BaseEntity() {
     @Column(name = "address")
     var address: String? = null
 
-    @Column(name = "room_number")
-    var roomNumber: Int? = null
+    @Column(name = "rooms")
+    var rooms: Int? = null
 
     @ManyToMany
     @JoinTable(name = "advert_image",

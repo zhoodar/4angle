@@ -24,9 +24,9 @@ data class AdvertDto(
         var address: String? = null,
 
         @NotBlank(message = "Room Number cannot be null or empty")
-        var roomNumber: Int? = null
+        var rooms: Int? = null
 ) {
-    fun toModel(): Advert {
+    fun toAdvertModel(): Advert {
         val dto = this
 
         return Advert().apply {
@@ -36,7 +36,21 @@ data class AdvertDto(
             price = dto.price
             region = dto.region
             address = dto.address
-            roomNumber = dto.roomNumber
+            rooms = dto.rooms
         }
     }
 }
+fun Advert.toAdvertDto(): AdvertDto {
+    val model = this
+
+    return AdvertDto().apply {
+        tittle = model.tittle
+        description = model.description
+        contact = model.contact
+        price = model.price
+        region = model.region
+        address = model.address
+        rooms = model.rooms
+    }
+}
+
