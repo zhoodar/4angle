@@ -11,7 +11,7 @@ class SkipPathRequestMatcher(pathsToSkip: List<String>, processingPath: String) 
     private val processingMatcher: RequestMatcher
 
     init {
-        Assert.notNull(pathsToSkip)
+        Assert.notNull(pathsToSkip, "Path could not be null")
         val m = pathsToSkip.map { AntPathRequestMatcher(it) }
         matchers = OrRequestMatcher(m)
         processingMatcher = AntPathRequestMatcher(processingPath)

@@ -7,12 +7,12 @@ import org.springframework.util.StringUtils
 @Component
 class JwtHeaderTokenExtractor : TokenExtractor {
 
-    override fun extract(payload: String): String {
+    override fun extract(payload: String?): String {
         if (StringUtils.isEmpty(payload)) {
             throw AuthenticationServiceException("Authorization header cannot be blank!")
         }
 
-        if (payload.length < HEADER_PREFIX.length) {
+        if (payload!!.length < HEADER_PREFIX.length) {
             throw AuthenticationServiceException("Invalid authorization header size.")
         }
 

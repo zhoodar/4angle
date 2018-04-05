@@ -14,7 +14,7 @@ import javax.validation.constraints.NotNull
 
 @Component
 @Order(Ordered.HIGHEST_PRECEDENCE)
-@PropertySource("classpath:application.properties")
+@PropertySource("classpath:application.yml")
 class CrossOriginFilter(
         @NotNull
         @Value("\${access-control-allow-origin}")

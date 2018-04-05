@@ -7,6 +7,13 @@ data class RestResponse<E>(
 )
 
 data class ErrorResponse(
-        var httpStatus: HttpStatus,
-        var message: String
+        val httpStatus: HttpStatus,
+        val message: String
 )
+
+data class PageableRestResponse<E>(
+        val meta: MetaData,
+        val response: E
+)
+
+data class MetaData(val page: Int, val limit: Int, val total: Long)

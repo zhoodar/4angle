@@ -12,8 +12,8 @@ import javax.validation.constraints.NotNull
 class JwtProperty {
 
     @NotNull
-    val issuer: String? = null
+    lateinit var issuer: String
 
     @NotNull
-    val signingKey: String? = null
+    lateinit var signingKey: String
 }

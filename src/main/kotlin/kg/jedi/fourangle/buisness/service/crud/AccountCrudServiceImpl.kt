@@ -12,6 +12,6 @@ class AccountCrudServiceImpl(private val accountRepository: AccountRepository)
 
 
     override fun getByEmailOrPhone(emailOrPhone: String): Optional<Account> {
-        return accountRepository.findOneByEmailOrPhoneNumber(emailOrPhone)
+        return accountRepository.findOneByEmailOrPhoneNumber(emailOrPhone, emailOrPhone)
     }
 }
